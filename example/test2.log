@@ -1,8 +1,8 @@
-qweinfo  : User login successful
-qwewarning: Low memory warning
-qweeqrror: Failed to load plugin 'audio_driver'
-qweinfo: Update check completed
-qwewarning: SSL certificate expires soon
-qwewarning : qwerweqr 
-qweinfo: Update check completed
-qweinfo: Update check completed
+info  : User login successful
+warning: Low memory warning
+error: Failed to load plugin 'audio_driver'
+info: Update check completed
+warning: SSL certificate expires soon
+warning : qwerweqr 
+info: Update check completed
+info: Update check completed

@@ -4,24 +4,24 @@ proc json_escape {str} {
 }
 
 proc dict_to_json {dictData} {
-    set json "{"
-    set firstType 1
-    foreach {type messages} $dictData {
-        if {!$firstType} { append json "," }
-        set firstType 0
-        append json "\n\t\"$type\": {"
-        set firstLine 1
-        foreach {lineNum msg} $messages {
-            if {!$firstLine} { append json "," }
-            set firstLine 0
-            append json "\n\t\t\"$lineNum\": \""
-            append json [json_escape $msg]
-            append json "\""
-        }
-        append json "\n\t}"
-    }
-    append json "\n }"
-    return $json
+	set json "{"
+	set firstType 1
+	foreach {type messages} $dictData {
+		if {!$firstType} { append json "," }
+		set firstType 0
+		append json "\n\t\t\"$type\": {"
+		set firstLine 1
+		foreach {lineNum msg} $messages {
+			if {!$firstLine} { append json "," }
+			set firstLine 0
+			append json "\n\t\t\t\"$lineNum\": \""
+			append json [json_escape $msg]
+			append json "\""
+			}
+			append json "\n\t\t}"
+	}
+	append json "\n\t}"
+	return $json
 }
 
 
@@ -56,7 +56,7 @@ proc get_log_files {dir} {
 proc main {} {
 
 	if {$::argc != 2} {
-		puts "Error: Please provide exactly 2 arguments."
+		puts stderr "Error: Please provide exactly 2 arguments."
 		exit 1
 	}
 
@@ -71,20 +71,20 @@ proc main {} {
 	}
 
 	if {![info exists args(path)]} {
-		puts "<Usage: log_finding_script_name>.tcl -path <logs_root_path>"
+		puts stderr "<Usage: log_finding_script_name>.tcl -path <logs_root_path>"
 		exit 1
 	}
 
 	set dir $args(path)
 	if {![file isdirectory $dir]} {
-		puts "Error: $dir is not a directory"
+		puts stderr "Error: $dir is not a directory"
 		exit 1
 	}
 
 	set all_logs [get_log_files $dir]
 
 	if {[llength $all_logs] == 0} {
-		puts "No log files found in directory: $dir"
+		puts stderr "No log files found in directory: $dir"
 		exit 1
 	}
 
@@ -101,7 +101,7 @@ proc main {} {
 	foreach {fileName data} $result {
 		if {!$firstFile} { append json_str "," }
 		set firstFile 0
-		append json_str "\n \"$fileName\": " [dict_to_json $data]
+		append json_str "\n\t\"$fileName\": " [dict_to_json $data]
 	}
 	append json_str "\n}"
 

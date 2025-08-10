@@ -1,8 +1,11 @@
-info  : User login successful
-warning: Low memory warning
-error: Failed to load plugin 'audio_driver'
-info: Update check completed
-warning: SSL certificate expires soon
-warning : qwerweqr 
-info: Update check completed
-info: Update check completed
+error: Database connection lost
+Retrying in 5 seconds...
+error: Failed to reconnect to DB after 3 attempts
+Additional info:
+  - Last successful query ID: 102345
+  - Query: SELECT * FROM users WHERE status = 'active'
+info: System shutdown initiated by user 'root'
+warning: Deprecated API usage detected in module 'legacy.auth'
+  - Function 'authenticateUser' will be removed in version 3.0
+error: Unexpected token '}' in configuration file at line 128
+info: Configuration reload completed successfully

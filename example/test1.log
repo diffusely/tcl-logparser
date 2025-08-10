@@ -1,6 +1,11 @@
-info: System boot completed
-warning: CPU temperature is high
-error: Unable to start network service
-info: Scheduled backup started
-error: Disk write failure detected
-error: Disk write failure detected
+error: Failed to initialize module 'net.core' at 2025-08-09 15:23:45
+Details:
+  - Code: 0xE0434352
+  - Description: Unhandled exception (NullReferenceException)
+  - Stacktrace:
+    at Network.Core.Initialize()
+    at System.AppDomain._nExecuteAssembly()
+warning: Low disk space on drive C: (5% remaining)
+info: Scheduled task "BackupJob" started at 2025-08-09 02:00:00
+info: User "admin" logged in from IP 192.168.1.100
+warning: CPU temperature critical (95°C) - throttling enabled

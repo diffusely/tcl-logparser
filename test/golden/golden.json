@@ -1,0 +1,30 @@
+{
+  "test1.log": {
+    "Error": {
+      "1": "error: Failed to initialize module 'net.core' at 2025-08-09 15:23:45"
+    },
+    "Warning": {
+      "8": "warning: Low disk space on drive C: (5% remaining)",
+      "11": "warning: CPU temperature critical (95°C) - throttling enabled"
+    },
+    "Info": {
+      "9": "info: Scheduled task \"BackupJob\" started at 2025-08-09 02:00:00",
+      "10": "info: User \"admin\" logged in from IP 192.168.1.100"
+    }
+  },
+  "test2.log": {
+    "Error": {
+      "1": "error: Database connection lost",
+      "3": "error: Failed to reconnect to DB after 3 attempts",
+      "10": "error: Unexpected token '}' in configuration file at line 128"
+    },
+    "Warning": {
+      "8": "warning: Deprecated API usage detected in module 'legacy.auth'"
+    },
+    "Info": {
+      "7": "info: System shutdown initiated by user 'root'",
+      "11": "info: Configuration reload completed successfully"
+    }
+  }
+
+}

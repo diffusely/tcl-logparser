@@ -32,7 +32,22 @@ tclsh bin/parse_logs.tcl -path example
 2. Run the test in the terminal:
 
     ```sh
-    pytest test/pytest/test_json_diff.py
+    pytest test/pytest/test_json.py -v -s --tb=no
+    ```
+
+    **Flag explanations:**
+    - `-v` = **Verbose mode** - Shows detailed test information and results
+    - `-s` = **Show output** - Displays print statements and colored output from the test
+    - `--tb=no` = **No traceback** - Hides error details for cleaner output
+
+    **Alternative commands:**
+    ```sh
+    # For cleanest output (recommended)
+    pytest test/pytest/test_json.py -s --tb=no --no-header -q
+    
+    # Run as standalone script (no pytest formatting)
+    python test/pytest/test_json.py
     ```
 
 - This test runs the TCL script and compares the generated JSON file with the golden reference.
+- Shows colored output with ✅ for found messages and ❌ for missing messages.

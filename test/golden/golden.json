@@ -1,30 +1,48 @@
 {
-  "test1.log": {
-    "Error": {
-      "1": "error: Failed to initialize module 'net.core' at 2025-08-09 15:23:45"
-    },
-    "Warning": {
-      "8": "warning: Low disk space on drive C: (5% remaining)",
-      "11": "warning: CPU temperature critical (95°C) - throttling enabled"
-    },
-    "Info": {
-      "9": "info: Scheduled task \"BackupJob\" started at 2025-08-09 02:00:00",
-      "10": "info: User \"admin\" logged in from IP 192.168.1.100"
-    }
+  "Error": {
+    "1": "Failed to connect to database server at 192.168.1.100:5432",
+    "2": "Authentication failed for user 'admin' from IP 10.0.0.15",
+    "3": "Unable to write to log file /var/log/app.log - permission denied",
+    "4": "Network timeout while connecting to external API",
+    "5": "Failed to parse configuration file at line 45",
+    "6": "Out of memory error in image processing module",
+    "7": "Critical system file /etc/passwd is corrupted",
+    "8": "Segmentation fault in worker process PID 8472",
+    "9": "File system corruption detected on /dev/sda1",
+    "10": "Memory leak detected in module data_processor.py",
+    "11": "Docker container 'web-app-01' failed to start",
+    "12": "Redis connection lost - attempting reconnection",
+    "13": "Database deadlock detected on transaction TX_98765"
   },
-  "test2.log": {
-    "Error": {
-      "1": "error: Database connection lost",
-      "3": "error: Failed to reconnect to DB after 3 attempts",
-      "10": "error: Unexpected token '}' in configuration file at line 128"
-    },
-    "Warning": {
-      "8": "warning: Deprecated API usage detected in module 'legacy.auth'"
-    },
-    "Info": {
-      "7": "info: System shutdown initiated by user 'root'",
-      "11": "info: Configuration reload completed successfully"
-    }
+  "Warning": {
+    "1": "Memory usage at 85% threshold",
+    "2": "SSL certificate expires in 30 days",
+    "3": "Disk space on /var/log partition below 10%",
+    "4": "High CPU usage detected on core 2 (95%)",
+    "5": "Deprecated function 'old_encrypt()' used in module auth.py",
+    "6": "Invalid character encoding detected in input file",
+    "7": "Connection pool exhausted, current active: 100/100",
+    "8": "Slow query detected: SELECT * FROM users WHERE age > 50 (2.5s)",
+    "9": "Rate limit exceeded for API key abc123xyz (1000 req/min)",
+    "10": "Temperature sensor reading critical: CPU 89°C",
+    "11": "Elasticsearch cluster health status: YELLOW",
+    "12": "JWT token validation failed for request /api/v1/users",
+    "13": "S3 bucket approaching storage limit (95% full)"
+  },
+  "Info": {
+    "1": "System initialization started",
+    "2": "Backup process scheduled for 02:00 AM",
+    "3": "Cache cleared successfully",
+    "4": "User session expired for user ID 12345",
+    "5": "Database backup completed successfully",
+    "6": "New user registration: email=test@example.com",
+    "7": "Scheduled maintenance window starts in 1 hour",
+    "8": "Automatic software update available (version 2.1.4)",
+    "9": "Load balancer switched to backup server pool",
+    "10": "Security scan completed - 0 vulnerabilities found",
+    "11": "Service mesh configuration updated",
+    "12": "CDN cache hit ratio: 94.2%",
+    "13": "Microservice 'payment-service' scaled to 5 replicas",
+    "14": "Feature flag 'new-checkout-flow' enabled for 10% of users"
   }
-
 }

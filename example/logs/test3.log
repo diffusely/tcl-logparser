@@ -1,0 +1,10 @@
+info: System initialization started
+warning: Memory usage at 85% threshold
+error: Failed to connect to database server at 192.168.1.100:5432
+info: Backup process scheduled for 02:00 AM
+warning: SSL certificate expires in 30 days
+error: Authentication failed for user 'admin' from IP 10.0.0.15
+info: Cache cleared successfully
+warning: Disk space on /var/log partition below 10%
+error: Unable to write to log file /var/log/app.log - permission denied
+info: User session expired for user ID 12345

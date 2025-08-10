@@ -1,11 +1,10 @@
-error: Database connection lost
-Retrying in 5 seconds...
-error: Failed to reconnect to DB after 3 attempts
-Additional info:
-  - Last successful query ID: 102345
-  - Query: SELECT * FROM users WHERE status = 'active'
-info: System shutdown initiated by user 'root'
-warning: Deprecated API usage detected in module 'legacy.auth'
-  - Function 'authenticateUser' will be removed in version 3.0
-error: Unexpected token '}' in configuration file at line 128
-info: Configuration reload completed successfully
+error: Network timeout while connecting to external API
+warning: High CPU usage detected on core 2 (95%)
+info: Database backup completed successfully
+error: Failed to parse configuration file at line 45
+warning: Deprecated function 'old_encrypt()' used in module auth.py
+info: New user registration: email=test@example.com
+error: Out of memory error in image processing module
+warning: Invalid character encoding detected in input file
+info: Scheduled maintenance window starts in 1 hour
+error: Critical system file /etc/passwd is corrupted

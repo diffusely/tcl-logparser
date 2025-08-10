@@ -31,10 +31,9 @@ proc parse_log_file {filepath} {
 	set line_num 0
 	while {[gets $fh line] >= 0} {
 		incr line_num
-		if {[regexp {^\s*(error|warning|info)\s*:\s*(.*)} $line -> type msg]} {
-			set type [string tolower $type]
-			set type [string toupper [string index $type 0]][string range $type 1 end]
-			dict set messages $type $line_num $line
+		if {[regexp {^\s*(error|warning|info):\s*(.*)} $line -> type msg]} {
+		set type [string toupper [string index $type 0]][string range $type 1 end]
+		dict set messages $type $line_num $msg
 		}
 	}
 	close $fh

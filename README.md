@@ -19,6 +19,11 @@ tclsh bin/parse_logs.tcl -path example
 - This command scans all `.log` files inside the `example` directory (and its subdirectories).
 - It generates a JSON file `parsed_logs.json` in the root directory containing the parsed log messages.
 
+**If you get a permission denied error:**
+```sh
+chmod +x bin/parse_logs.tcl
+```
+
 ---
 
 ### 2. Run the Automated Test
@@ -46,7 +51,7 @@ tclsh bin/parse_logs.tcl -path example
     pytest test/pytest/test_json.py -s --tb=no --no-header -q
     
     # Run as standalone script (no pytest formatting)
-    python test/pytest/test_json.py
+    python3 test/pytest/test_json.py
     ```
 
 - This test runs the TCL script and compares the generated JSON file with the golden reference.
